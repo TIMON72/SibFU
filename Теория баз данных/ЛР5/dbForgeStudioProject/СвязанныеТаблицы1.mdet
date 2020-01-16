@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), Master-detail document file -->
+<!-- Modifying this generated file will probably render it invalid -->
+<Document>
+  <Properties>
+    <Type>Master-detail Document</Type>
+    <DatabaseProvider>59f90733-4d68-4fdf-82a7-f0fcbf5460aa</DatabaseProvider>
+    <ProviderVersion>7.2.58.0</ProviderVersion>
+    <SchemaVersion>1.0</SchemaVersion>
+  </Properties>
+  <Connection Name="MyConnection">
+    <Category>00000000-0000-0000-0000-000000000000</Category>
+    <ConnectionString>User Id=root;Host=localhost;Database=performance_schema;Character Set=utf8</ConnectionString>
+  </Connection>
+  <Views ShowAdditionalViews="True" IsLayoutActiveAttribute="False" MainViewAttribute="Design" MainViewScale="75">
+    <View Name="Design" Active="True" Visible="True">
+      <Data>
+        <Properties LocationX="37" LocationY="225" Scale="1" />
+        <Tables>
+          <Table Name="mydatabase.cities" Type="Table" Left="100" Top="450" Width="173.156677246094" Height="120" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="IDc" InSelect="True" SortType="0" />
+              <Field Name="cName" InSelect="True" SortType="0" />
+              <Field Name="cPhoneCode" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="mydatabase.goodsstorage" Type="Table" Left="350" Top="500" Width="173.156677246094" Height="138" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="IDgs" InSelect="True" SortType="0" />
+              <Field Name="IDgc" InSelect="True" SortType="0" />
+              <Field Name="gsAmount" InSelect="True" SortType="0" />
+              <Field Name="IDsd" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="mydatabase.goodstransfers" Type="Table" Left="600" Top="600" Width="173.156677246094" Height="174" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="IDgt" InSelect="True" SortType="0" />
+              <Field Name="gtDate" InSelect="True" SortType="0" />
+              <Field Name="IDgc" InSelect="True" SortType="0" />
+              <Field Name="IDsdFrom" InSelect="True" SortType="0" />
+              <Field Name="IDsdTo" InSelect="True" SortType="0" />
+              <Field Name="gtAmount" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="mydatabase.incominggoods" Type="Table" Left="350" Top="250" Width="173.156677246094" Height="174" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="IDig" InSelect="True" SortType="0" />
+              <Field Name="igDate" InSelect="True" SortType="0" />
+              <Field Name="IDgc" InSelect="True" SortType="0" />
+              <Field Name="igAmount" InSelect="True" SortType="0" />
+              <Field Name="IDsc" InSelect="True" SortType="0" />
+              <Field Name="IDsd" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="mydatabase.storagedescription" Type="Table" Left="100" Top="600" Width="173.156677246094" Height="156" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="IDsd" InSelect="True" SortType="0" />
+              <Field Name="IDc" InSelect="True" SortType="0" />
+              <Field Name="sdName" InSelect="True" SortType="0" />
+              <Field Name="sdAddress" InSelect="True" SortType="0" />
+              <Field Name="sdPhone" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="mydatabase.supplierscatalog" Type="Table" Left="100" Top="250" Width="173.156677246094" Height="156" Collapsed="False" IsMaster="True" FetchLimit="1000">
+            <Fields>
+              <Field Name="IDsc" InSelect="True" SortType="0" />
+              <Field Name="scName" InSelect="True" SortType="0" />
+              <Field Name="scAddress" InSelect="True" SortType="0" />
+              <Field Name="scPhone" InSelect="True" SortType="0" />
+              <Field Name="scEmail" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="mydatabase.typegoods" Type="Table" Left="600" Top="250" Width="173.156677246094" Height="102" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="IDtg" InSelect="True" SortType="0" />
+              <Field Name="tgName" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="mydatabase.goodscatalog" Type="Table" Left="600" Top="400" Width="173.156677246094" Height="156" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="IDgc" InSelect="True" SortType="0" />
+              <Field Name="gcName" InSelect="True" SortType="0" />
+              <Field Name="IDtg" InSelect="True" SortType="0" />
+              <Field Name="gcMeasure" InSelect="True" SortType="0" />
+              <Field Name="gcCost" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+        </Tables>
+        <Links>
+          <Link OutTable="mydatabase.cities" OutField="IDc" InTable="mydatabase.storagedescription" InField="IDc" />
+          <Link OutTable="mydatabase.storagedescription" OutField="IDsd" InTable="mydatabase.goodsstorage" InField="IDsd" />
+          <Link OutTable="mydatabase.storagedescription" OutField="IDsd" InTable="mydatabase.goodstransfers" InField="IDsdFrom" />
+          <Link OutTable="mydatabase.storagedescription" OutField="IDsd" InTable="mydatabase.goodstransfers" InField="IDsdTo" />
+          <Link OutTable="mydatabase.storagedescription" OutField="IDsd" InTable="mydatabase.incominggoods" InField="IDsd" />
+          <Link OutTable="mydatabase.supplierscatalog" OutField="IDsc" InTable="mydatabase.incominggoods" InField="IDsc" />
+          <Link OutTable="mydatabase.typegoods" OutField="IDtg" InTable="mydatabase.goodscatalog" InField="IDtg" />
+          <Link OutTable="mydatabase.goodscatalog" OutField="IDgc" InTable="mydatabase.goodsstorage" InField="IDgc" />
+          <Link OutTable="mydatabase.goodscatalog" OutField="IDgc" InTable="mydatabase.goodstransfers" InField="IDgc" />
+          <Link OutTable="mydatabase.goodscatalog" OutField="IDgc" InTable="mydatabase.incominggoods" InField="IDgc" />
+        </Links>
+      </Data>
+    </View>
+    <View Name="Data" Visible="True" />
+  </Views>
+  <Settings>
+    <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PageOptions">
+      <TopLeftMargins>
+        <Width>10 mm</Width>
+        <Height>10 mm</Height>
+      </TopLeftMargins>
+      <BottomRightMargins>
+        <Width>10 mm</Width>
+        <Height>10 mm</Height>
+      </BottomRightMargins>
+      <PaperSize>
+        <Width>210 mm</Width>
+        <Height>297 mm</Height>
+      </PaperSize>
+    </Options>
+    <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PrintOptions" />
+  </Settings>
+</Document>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.054,=C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.223,C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.410,C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Lab1_1\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.477,C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Lab1.pas=C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Lab1_1\Lab1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.477,C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Lab1.dfm=C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Lab1_1\Lab1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.832,C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Lab1.dfm=C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Unit4.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.832,C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Lab1.pas=C:\Users\Apocalypse\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+  </Transactions>
+</BorlandProject>

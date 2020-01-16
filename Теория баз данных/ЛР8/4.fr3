@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="5.3.14" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="42856,6518694329" ReportOptions.Description.Text="" ReportOptions.LastChange="42856,6811150347" ScriptLanguage="PascalScript" ScriptText.Text="&#13;&#10;begin&#13;&#10;&#13;&#10;end.">
+  <Datasets>
+    <item DataSet="frxDBDataset3" DataSetName="Group"/>
+  </Datasets>
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="22,67718" Left="0" Top="18,89765" Width="718,1107"/>
+    <TfrxMasterData Name="MasterData1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="30,23624" Left="0" Top="151,1812" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDataset3" DataSetName="Group" RowCount="0">
+      <TfrxMemoView Name="GroupIDgc1" Left="86,92919" Top="3,77953" Width="79,37013" Height="18,89765" DataSet="frxDBDataset3" DataSetName="Group" Text="[Group.&#34;IDtg&#34;]"/>
+      <TfrxMemoView Name="GroupgcName" Left="109,60637" Top="3,77953" Width="359,05535" Height="18,89765" DataField="gcName" DataSet="frxDBDataset3" DataSetName="Group" Text="[Group.&#34;gcName&#34;]"/>
+      <TfrxMemoView Name="GroupgcMeasure" Left="472,44125" Top="3,77953" Width="128,50402" Height="18,89765" DataField="gcMeasure" DataSet="frxDBDataset3" DataSetName="Group" Text="[Group.&#34;gcMeasure&#34;]"/>
+      <TfrxMemoView Name="GroupgcCost" Left="604,7248" Top="3,77953" Width="105,82684" Height="18,89765" DataSet="frxDBDataset3" DataSetName="Group" DisplayFormat.FormatStr="%2.2m" DisplayFormat.Kind="fkNumeric" Text="[Group.&#34;gcCost&#34;]">
+        <Highlights>
+          <item Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Condition="Value &#60; 25" FillType="ftBrush" Fill.BackColor="13434828" Fill.ForeColor="16711680"/>
+          <item Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Condition="Value &#62; 25 &#60; 55" FillType="ftBrush" Fill.BackColor="16629143"/>
+        </Highlights>
+      </TfrxMemoView>
+      <TfrxMemoView Name="Memo4" Left="109,60637" Top="7,55906" Width="600,94527" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="8" ParentFont="False" Text=""/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="22,67718" Left="0" Top="317,48052" Width="718,1107">
+      <TfrxMemoView Name="Memo1" Left="642,5201" Top="0" Width="75,5906" Height="18,89765" HAlign="haRight" Text="[Page#]"/>
+    </TfrxPageFooter>
+    <TfrxGroupHeader Name="GroupHeader1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="26,45671" Left="0" Top="102,04731" Width="718,1107" Condition="Group.&#34;tgName&#34;" DrillDown="True" ExpandDrillDown="True">
+      <TfrxMemoView Name="GroupIDgc" Left="15,11812" Top="3,77953" Width="695,43352" Height="18,89765" DataSet="frxDBDataset3" DataSetName="Group" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Fill.BackColor="10218495" ParentFont="False" Text="[Group.&#34;IDtg&#34;]"/>
+      <TfrxMemoView Name="GrouptgName" Left="109,60637" Top="3,77953" Width="105,82684" Height="18,89765" DataField="tgName" DataSet="frxDBDataset3" DataSetName="Group" Text="[Group.&#34;tgName&#34;]"/>
+    </TfrxGroupHeader>
+    <TfrxGroupFooter Name="GroupFooter1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="52,91342" Left="0" Top="204,09462" Width="718,1107">
+      <TfrxMemoView Name="Memo2" Left="517,79561" Top="7,55906" Width="192,75603" Height="34,01577" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Fill.BackColor="16774348" ParentFont="False" Text="Средняя стимость: [AVG(&#60;Group.&#34;gcCost&#34;&#62;,MasterData1,1) #n%2,2m]&#13;&#10;Количество: [COUNT(MasterData1)]"/>
+    </TfrxGroupFooter>
+  </TfrxReportPage>
+</TfrxReport>
