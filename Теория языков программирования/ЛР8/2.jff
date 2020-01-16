@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 6.4.--><structure>&#13;
+	<type>lsystem</type>&#13;
+	<!--The L-system axiom.-->&#13;
+	<axiom>W</axiom>&#13;
+	<!--The rewriting rules.-->&#13;
+	<production>&#13;
+		<left>W</left>&#13;
+		<right>[ ## ## W X f f X + + + f f W ]</right>&#13;
+	</production>&#13;
+	<production>&#13;
+		<left>X</left>&#13;
+		<right>[ { - g + + g % - - g } ]</right>&#13;
+	</production>&#13;
+	<!--The drawing parameters.-->&#13;
+	<parameter>&#13;
+		<name>angle</name>&#13;
+		<value>37.5</value>&#13;
+	</parameter>&#13;
+	<parameter>&#13;
+		<name>distance</name>&#13;
+		<value>20</value>&#13;
+	</parameter>&#13;
+	<parameter>&#13;
+		<name>polygonColor</name>&#13;
+		<value>yellow</value>&#13;
+	</parameter>&#13;
+</structure>
