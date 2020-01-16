@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.909,=D:\Programming\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.998,D:\Programming\RAD Studio\Projects\Unit1.pas=D:\Cloud Drivers\OneDrive\ТБД\Лабораторные работы\ЛР2\RADProject1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.339,=D:\Cloud Drivers\OneDrive\ТБД\Лабораторные работы\ЛР2\RADProject1\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.998,D:\Programming\RAD Studio\Projects\Unit1.dfm=D:\Cloud Drivers\OneDrive\ТБД\Лабораторные работы\ЛР2\RADProject1\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.285,=D:\Cloud Drivers\OneDrive\ТБД\Лабораторные работы\ЛР2\RADProject1\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.235,=D:\Cloud Drivers\OneDrive\ТБД\Лабораторные работы\ЛР2\RADProject1\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.063,=D:\Cloud Drivers\OneDrive\ТБД\Лабораторные работы\ЛР2\RADProject1\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.282,D:\Programming\RAD Studio\Projects\Project1.dproj=D:\Cloud Drivers\OneDrive\ТБД\Лабораторные работы\ЛР2\RADProject1\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
