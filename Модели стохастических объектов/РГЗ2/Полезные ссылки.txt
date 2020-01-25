@@ -1,0 +1,3 @@
+https://msdn.microsoft.com/ru-ru/magazine/mt683800.aspx - отличия регрессии от стандартного подхода
+http://www.insycom.ru/html/metodmat/Automat2011/Lect14.pdf - лекции для литературы
+https://habr.com/post/307004/ - информация о линейной регрессии
