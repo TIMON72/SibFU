@@ -1,7 +1,0 @@
-http://microtechnics.ru/obuchenie-nejronnoj-seti-algoritm-obratnogo-rasprostraneniya-oshibok/ - метод обратного распространения ошибки пошагово (неполный)
-http://www.aiportal.ru/articles/neural-networks/back-propagation.html - метод обратного распространения ошибки в картинках (неполный)
-https://proglib.io/p/neural-network-course/ - пошаговое пояснение по нейросетям с картинками (без алгоритма)
-
-https://habrahabr.ru/post/313216/
-https://habrahabr.ru/post/198268/
-https://proglib.io/p/neural-nets-guide/
