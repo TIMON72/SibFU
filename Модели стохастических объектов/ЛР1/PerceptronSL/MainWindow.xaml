@@ -1,0 +1,30 @@
+﻿<Window x:Class="PerceptronSL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PerceptronSL"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="546" Width="541.667">
+    <Grid Margin="0,0,0,-5">
+        <Rectangle x:Name="rec11" Fill="Black" Height="50" Width="50" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec12" Fill="White" Height="50" Width="50" Margin="65,10,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec13" Fill="White" Height="50" Width="50" Margin="120,10,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec21" Fill="White" Height="50" Width="50" Margin="10,65,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec22" Fill="White" Height="50" Width="50" Margin="65,65,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec23" Fill="White" Height="50" Width="50" Margin="120,65,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec31" Fill="White" Height="50" Width="50" Margin="10,120,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec32" Fill="White" Height="50" Width="50" Margin="65,120,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec33" Fill="White" Height="50" Width="50" Margin="120,120,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec41" Fill="White" Height="50" Width="50" Margin="10,175,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec42" Fill="White" Height="50" Width="50" Margin="65,175,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec43" Fill="White" Height="50" Width="50" Margin="120,175,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec51" Fill="White" Height="50" Width="50" Margin="10,230,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec52" Fill="White" Height="50" Width="50" Margin="65,230,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rec53" Fill="White" Height="50" Width="50" Margin="120,230,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Button x:Name="B_Association" Content="Run" HorizontalAlignment="Left" Margin="255,10,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="B_Run_Click"/>
+        <TextBox x:Name="TB_Answer" HorizontalAlignment="Left" Height="500" Margin="335,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+        <Button x:Name="B_Teaching" Content="Teaching" HorizontalAlignment="Left" Margin="175,10,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="B_Teaching_Click"/>
+        <Button x:Name="B_Experience" Content="Experience" HorizontalAlignment="Left" Margin="175,65,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="B_Experience_Click"/>
+    </Grid>
+</Window>
