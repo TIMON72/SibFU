@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="98b5f37d-e2d1-4bb0-a31f-513ae5205cf9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62244/ServiceAuthorization.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceAuthorization.xsd" MetadataType="Schema" ID="9beada45-c604-4394-b66c-13afc3d65c35" SourceId="1" SourceUrl="http://localhost:62244/ServiceAuthorization.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceAuthorization.wsdl" MetadataType="Wsdl" ID="9a6fee8a-c743-413b-91f9-3e199f3bb4d1" SourceId="1" SourceUrl="http://localhost:62244/ServiceAuthorization.svc?wsdl" />
+    <MetadataFile FileName="ServiceAuthorization1.xsd" MetadataType="Schema" ID="75007161-fe98-414f-88ad-5b9b676d9746" SourceId="1" SourceUrl="http://localhost:62244/ServiceAuthorization.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceAuthorization2.xsd" MetadataType="Schema" ID="23b18a7c-078f-4baf-8c3b-868e91e7d533" SourceId="1" SourceUrl="http://localhost:62244/ServiceAuthorization.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceAuthorization.disco" MetadataType="Disco" ID="8e3693e0-b356-4a75-aaf8-f7eac0ac6b0c" SourceId="1" SourceUrl="http://localhost:62244/ServiceAuthorization.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
