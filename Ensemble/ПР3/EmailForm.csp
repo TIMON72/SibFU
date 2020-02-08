@@ -1,0 +1,24 @@
+<html>
+<head>
+<LINK REL="stylesheet" TYPE="text/css" HREF="csputils.css" TITLE="Standard Style" >
+</head>
+<body>
+<h1>Email Submission</h1> 
+<form action=EmailSubmit.csp>
+<div align="center" class="text1">
+Welcome to the Doodad Inc. email interface. Please send your email using the form below.
+</div>
+<div align="center">
+<table>
+<!--Data is added to the fields to make testing easier.
+The data can be removed or changed.-->
+<tr><td align=right>Name:</td><td><input name="Name" value=Test></td></tr>
+<tr><td align=right>Company ID:</td><td><input name="ID" value=1></td></tr>
+<tr><td align=right>To:</td><td><input name="ToAddress" value=@doodad.com></td></tr>
+<tr><td align=right>Text:</td><td><input name="EmailText" value="a gizmo"></td></tr>
+<tr><td align=right>&nbsp;</td><td align=right><input type=submit value="Apply"></td></tr>
+</table>
+</div>
+</form>
+</body>
+</html>

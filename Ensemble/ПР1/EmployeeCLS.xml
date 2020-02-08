@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="24" zv="Cache for Windows (x86-64) 2010.2.4 (Build 802U)" ts="2011-06-15 15:10:58">
+<Class name="User.Employee">
+<Super>%Persistent,%XML.Adaptor</Super>
+<TimeChanged>62257,54557.074617</TimeChanged>
+<TimeCreated>62244,41278.80439</TimeCreated>
+
+<Property name="LastName">
+<Type>%String</Type>
+</Property>
+
+<Property name="FirstName">
+<Type>%String</Type>
+</Property>
+
+<Property name="EmployeeID">
+<Type>%Integer</Type>
+</Property>
+
+<Property name="Department">
+<Type>%String</Type>
+</Property>
+
+<Property name="Email">
+<Type>%String</Type>
+</Property>
+
+<Property name="WorkPhone">
+<Type>%String</Type>
+</Property>
+
+<Property name="HomePhone">
+<Type>%String</Type>
+</Property>
+
+<Property name="MobilePhone">
+<Type>%String</Type>
+</Property>
+
+<Property name="Salary">
+<Type>%Numeric</Type>
+</Property>
+
+<Property name="SickDays">
+<Type>%Integer</Type>
+</Property>
+
+<Property name="VacationDays">
+<Type>%Integer</Type>
+</Property>
+
+<Property name="RelationshipToOwner">
+<Type>%String</Type>
+</Property>
+
+<Method name="ImportFromXML">
+<ClassMethod>1</ClassMethod>
+<FormalSpec>filename:%String="C:\Ensemble\AccessXML\Employee.xml"</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	
+	Set reader=##class(%XML.Reader).%New()
+	Set status=reader.OpenFile(filename)
+	quit:$$$ISERR(status) status
+	
+	Do reader.Correlate("Employee","User.Employee")
+	
+	While (reader.Next(.object,.status)){
+	 	set status=object.%Save()
+	 	quit:$$$ISERR(status) 
+	}
+	
+	Quit status
+]]></Implementation>
+</Method>
+
+<Storage name="Default">
+<Type>%Library.CacheStorage</Type>
+<DataLocation>^User.EmployeeD</DataLocation>
+<DefaultData>EmployeeDefaultData</DefaultData>
+<IdLocation>^User.EmployeeD</IdLocation>
+<IndexLocation>^User.EmployeeI</IndexLocation>
+<StreamLocation>^User.EmployeeS</StreamLocation>
+<Data name="EmployeeDefaultData">
+<Structure>listnode</Structure>
+<Subscript/>
+<Value name="1">
+<Value>%%CLASSNAME</Value>
+</Value>
+<Value name="2">
+<Value>LastName</Value>
+</Value>
+<Value name="3">
+<Value>FirstName</Value>
+</Value>
+<Value name="4">
+<Value>EmployeeID</Value>
+</Value>
+<Value name="5">
+<Value>Department</Value>
+</Value>
+<Value name="6">
+<Value>Email</Value>
+</Value>
+<Value name="7">
+<Value>WorkPhone</Value>
+</Value>
+<Value name="8">
+<Value>HomePhone</Value>
+</Value>
+<Value name="9">
+<Value>MobilePhone</Value>
+</Value>
+<Value name="10">
+<Value>Salary</Value>
+</Value>
+<Value name="11">
+<Value>SickDays</Value>
+</Value>
+<Value name="12">
+<Value>VacationDays</Value>
+</Value>
+<Value name="13">
+<Value>RelationshipToOwner</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+</Export>
