@@ -1,0 +1,58 @@
+body {
+
+}
+
+.header {
+    text-align: center;
+    width: 50%;
+    font-family: cursive;
+    border-style: double;
+}
+
+.messages {
+    width: 50%;
+    border-style: double;
+}
+
+.message {
+    border-bottom-style: dotted
+}
+
+.message .avatar {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.message .body {
+    overflow: hidden;
+}
+
+.message .text {
+    display: inline-block;
+    padding: 9px;
+    font-family: cursive;
+
+}
+
+.message .text:before, .message .text:after {
+    content: " ";
+}
+
+.message .headline {
+    font-size: 10pt;
+}
+
+.message .name {
+    font-weight: bold;
+}
+
+.input {
+    border-style: double;
+    width: 50%;
+    background: #eee;
+    height: 24px;
+    font: inherit;
+}

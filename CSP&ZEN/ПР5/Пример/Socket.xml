@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25" zv="Cache for Windows (x86-64) 2017.2 (Build 744U)" ts="2018-05-31 22:11:15">
+<Class name="User.Socket">
+<Super>%CSP.WebSocket</Super>
+<TimeChanged>64785,47965.813144</TimeChanged>
+<TimeCreated>64750,46056.595989</TimeCreated>
+
+<Method name="OnPreServer">
+<Description><![CDATA[
+Event handler for the <b>PreServer</b> event: this is invoked before
+starting the WebSockets Server.
+Changes to the <property>SharedConnection</property> flag must be made here.]]></Description>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	if $get(^ChatWebSocket("messages")) = "" set ^ChatWebSocket("messages") = 0
+	Quit $$$OK
+]]></Implementation>
+</Method>
+
+<Method name="Server">
+<Description><![CDATA[
+The WebSocket Server.  Use the <Method>Read</Method> and <Method>Write</Method> methods
+to receive data from, and send data to, the client.
+Call the <Method>EndServer</Method> method to gracefully terminate the WebSocket Server.
+A WebSocket operating asynchronously (<property>SharedConnection=1</property>) can exit this method (using <b>Quit</B>) and subsequently open the WebSocket using the <Method>OpenServer</Method> method.]]></Description>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set lastMsg = ^ChatWebSocket("messages")
+	for
+	{
+		set data = ..Read(,,1000)
+		if $get(data) '= ""
+		{
+			tstart
+			set ^ChatWebSocket("messages", $i(^ChatWebSocket("messages"))) = $lb(data,..WebSocketID,$zdt($h,3))
+			tcommit
+		}
+		while lastMsg < ^ChatWebSocket("messages")
+		{
+			set msg = ^ChatWebSocket("messages",$i(lastMsg))
+			do ..Write($li(msg,1)_" "_$li(msg,2)_" "_$li(msg,3))
+		}
+	}
+	return $$$OK
+]]></Implementation>
+</Method>
+</Class>
+</Export>

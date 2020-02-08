@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Socket app</title>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+
+<body>
+	
+	<section id="app">
+		<form @submit="send" onsubmit="return false;">
+			<div>
+				<label>Your message</label>
+				<input v-model="message">
+			</div>
+			<p><input type="submit" value="Send"></p>
+		</form>
+		<div>
+			<label>Messages</label>
+			<div v-for="item in messages">
+				<p>User ID: {{ item[1] }} </p>
+				<p>Date:    {{ item[2] }} {{ item[3] }} </p>
+				<p>Text:    {{ item[0] }} </p>
+			</div>
+		</div>
+	</section>
+
+	<script src="./vue.min.js"></script>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				messages: [],
+				message:  "",
+				socket: null
+			},
+			methods: {
+				send: function () {
+					if (this.message === "")
+						alert("Not allowed to send empty message");
+					else
+						this.socket.send(this.message);
+				}
+			},
+			created: function() {
+				this.socket = new WebSocket('ws://localhost:57772/csp/chat/User.Socket.cls');
+				this.socket.addEventListener('message', ({ data }) => {
+					this.messages.push(JSON.stringify(data).replace(/"/g,"").split(" "));
+				});
+				setInterval(function() {
+					this.socket.send("")
+				}.bind(this) , 1000);
+			}
+		});
+	</script>
+</body>
+
+</html>
