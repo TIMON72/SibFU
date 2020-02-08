@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="AnalyticHierarchyProcess.Step1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AnalyticHierarchyProcess"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="White">
+        <TextBox x:Name="TB_LeftCriterionName" HorizontalAlignment="Left" Margin="150,6,0,0" Text="LEFT" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="70" FontSize="24" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="TB_RightCriterionName" HorizontalAlignment="Left" Margin="400,6,0,0" Text="RIGHT" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" Height="70" HorizontalContentAlignment="Right" FontSize="24" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="TB_LeftCriterionRaiting" HorizontalAlignment="Left" Margin="90,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="70" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" TextChanged="TB_LeftCriterionRaiting_TextChanged"/>
+        <TextBox x:Name="TB_RightCriterionRaiting" HorizontalAlignment="Left" Margin="662,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="70" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" TextChanged="TB_RightCriterionRaiting_TextChanged"/>
+        <Button x:Name="B_Next" Content="Далее" HorizontalAlignment="Left" Margin="325,81,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="B_Next_Click"/>
+        <Button x:Name="B_TestData" Content="Тестовые данные" Margin="0,106,10,0" Click="B_TestData_Click" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <DataGrid x:Name="DG_Matrix" Margin="10,136,10,10" LoadingRow="DG_Matrix_LoadingRow" CanUserSortColumns="False"/>
+    </Grid>
+</UserControl>

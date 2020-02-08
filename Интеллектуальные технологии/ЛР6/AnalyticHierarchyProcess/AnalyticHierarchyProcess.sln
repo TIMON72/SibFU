@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyticHierarchyProcess", "AnalyticHierarchyProcess.csproj", "{B0B04878-700E-45E8-B5B0-723ED8CF889B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0B04878-700E-45E8-B5B0-723ED8CF889B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B04878-700E-45E8-B5B0-723ED8CF889B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B04878-700E-45E8-B5B0-723ED8CF889B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B04878-700E-45E8-B5B0-723ED8CF889B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9CDB83E-11C9-4889-B596-CEC8B0F56915}
+	EndGlobalSection
+EndGlobal
