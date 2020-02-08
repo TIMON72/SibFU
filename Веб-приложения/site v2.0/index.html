@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личная страница учителя Анисифоровой Светланы Андреевны">
+    <meta name="keywords" content="учитель, личная страница, школа, анисифорова, светлана, николаевна">
+    <meta name="author" content="Анисифорова Светлана Андреевна">
+    <title>Анисифорова Светлана Андреевна</title>
+    <!-- Styles -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/MyScripts.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="container">
+                <!-- Шапка сайта -->
+                <div class="row">
+                    <img class="img-responsive" src="pictures/head-bg-left.png">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <!-- Тело сайта -->
+                <div class="row">
+                    <p id="welcomeText" style="display: none; text-align: center; background-color: yellow; font-size: 20px;">
+                        Добро пожаловать!
+                    </p>
+                    <!-- Левая панель -->
+                    <div class="col-md-3">
+                        <!-- Боковое меню навигации -->
+                        <div class="row">
+                            <nav>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li>
+                                        <a href="main.html">
+                                            <span class="glyphicon glyphicon-home"></span> Главная</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-file"></span> Публикации</a>
+                                    </li>
+                                    <li>
+                                        <a href="material.html">
+                                            <span class="glyphicon glyphicon-inbox"></span> Учебный материал</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-star"></span> Достижения</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-picture"></span> Фотоальбом</a>
+                                    </li>
+                                    <li>
+                                        <a href="feedback.html">
+                                            <span class="glyphicon glyphicon-pencil"></span> Обратная связь</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Панель слайд-шоу -->
+                        <div class="row">
+                            <h3>Слайд-шоу</h3>
+                            <div id="slides" class="carousel slide" data-ride="carousel">
+                                <!-- Слайды карусели -->
+                                <div class="carousel-inner">
+                                    <!-- Слайд 1 -->
+                                    <div class="item active">
+                                        <img id="currentSlide" src="pictures/slides/1.jpg">
+                                    </div>
+                                </div>
+                                <!-- Навигация карусели (следующий или предыдущий слайд) -->
+                                <!-- Кнопка, переход на предыдущий слайд -->
+                                <a href="#" class="left carousel-control" onclick="prevSlide()">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <!-- Кнопка, переход на следующий слайд -->
+                                <a href="#" class="right carousel-control" onclick="nextSlide()">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9" id="content">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <!-- Футер сайта с ссылками на аналогичные сайты -->
+                <div class="row">
+                    <p>Коллеги:
+                        <a href="http://nsportal.ru/kopylova-galina-pavlovna" target="_blank">Копылова Галина Павловна</a>,
+                        <a href="http://nsportal.ru/svetlana-anatolevna-krupskaya" target="_blank">Крупская Светлана Анатольевна</a>,
+                        <a href="http://nsportal.ru/spravnikova-galina-gavrilovna" target="_blank">Справникова Галина Гавриловна</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript">
+        // <!-- Контент страницы (основное поле с информацией) -->
+        $(document).ready(function() {
+            $("#content").load("main.html");
+        })
+        // Анимация текста приветствия
+        $(window).load(function() {
+            $("#welcomeText").show("slow");
+            setTimeout("$('#welcomeText').hide('slow')", 3000);
+        });
+        // <!-- Обработчик прилипания навигации по контенту при скроллинге -->
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var top = $(document).scrollTop();
+                if (top > 150) {
+                    $("#navigation").css({
+                        position: 'fixed',
+                        top: '0px',
+                        zIndex: '1',
+                        backgroundColor: '#ffffff'
+                    });
+                } else {
+                    $("#navigation").css({
+                        position: 'relative',
+                    });
+                }
+            });
+        });
+        // 
+        function setCookie(name, value, days) {
+            Cookies.set(name, value, {
+                expires: days
+            });
+        }
+        //
+        function deleteAllCookies() {
+            var cookies = document.cookie.split(";");
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];
+                var eqPos = cookie.indexOf("=");
+                var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            }
+            jQuery(document).ready(function($) {
+                $("#catalogButton").click(function(event) {
+                    link = $(this).attr("href");
+                    var name = this.textContent;
+                    console.log("Произошел переход на " + "'" + name + " '");
+                    $.ajax({
+                            type: "GET",
+                            url: link,
+                            dataType: "html",
+                        })
+                        .done(function(html) {
+                            $("#content").animate({
+                                opacity: 0
+                            }, 0);
+                            $("#content").empty().append(html);
+                            $("#content").animate({
+                                opacity: 1
+                            }, 1000);
+                        });
+                    return false;
+                });
+            })
+        }
+        // 
+        $(function() {
+            $("a[href^='#']").click(function() {
+                link = $(this).attr("href");
+                $("html, body").animate({
+                    scrollTop: $('a[name="' + this.hash.slice(1) + '"]').offset().top + "px"
+                });
+                return false;
+            });
+        });
+        // <!-- Обработчик клика по ссылке и вставка в #content html-кода -->
+        jQuery(document).ready(function($) {
+            $("a").click(function(event) {
+                link = $(this).attr("href");
+                if (link == "#") {
+                    return false;
+                } else if (link.substring(0, 4) == "http") {
+                    console.log("Произошел переход на " + "' " + link + " '");
+                    return true;
+                }
+                var name = this.textContent;
+                console.log("Произошел переход на " + "'" + name + " '");
+                $.ajax({
+                        type: "GET",
+                        url: link,
+                        dataType: "html",
+                    })
+                    .done(function(html) {
+                        $("#content").animate({
+                            opacity: 0
+                        }, 0);
+                        $("#content").empty().append(html);
+                        $("#content").animate({
+                            opacity: 1
+                        }, 1000);
+                    });
+                return false;
+            });
+        })
+        //
+        counter = 0;
+        // Добавить элемент LI (на странице feedback)
+        function addLI() {
+            var elementLI = document.createElement("li");
+            elementLI.id = "li" + counter;
+            var textLI = document.createTextNode("LI " + counter);
+            elementLI.appendChild(textLI);
+            var elementUL = document.getElementById("testUL");
+            elementUL.appendChild(elementLI);
+            counter++;
+        }
+        // Удалить элемент LI (на странице feedback)
+        function deleteLI() {
+            var elementUL = document.getElementById("testUL");
+            var position = document.getElementById("positionDelete").value;
+            var elementLI = document.getElementById("li" + position);
+            elementUL.removeChild(elementLI);
+        }
+        // <!-- Вывод в консоль информации о странице -->
+        var result = getAnchors();
+        console.info("Количество якорей на странице main.html: " + result);
+        result = getLinks();
+        console.info("Количество ссылок на странице main.html: " + result);
+        result = getImages();
+        console.info("Количество изображений на странице main.html: " + result);
+
+    </script>
+</body>
+
+</html>

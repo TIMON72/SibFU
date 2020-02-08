@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script src="lib/angular/angular.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+</head>
+<script>
+    ctrModule.controller('FirstCtr', function($scope) {
+        $scope.name = "abc";
+        $scope.obj = {
+            name: "Федр",
+            age: 32,
+            subjects: ['Физика', 'Математика']
+        };
+
+
+    });
+
+</script>
+
+<body ng-app="mainModule">
+    <div ng-controller="FirstCtr">
+        <form name="firstForm">
+            <input ng-model="name" required />
+            <pre> $scope.name = {{name}} </pre>
+            <input ng-model="obj.name" />
+            <pre> $scope.obj = {{obj}} </pre>
+            <pre> $scope.obj.name = {{obj.name}} </pre>
+            <input ng-model="obj.subjects[0]" />
+            <pre> $scope.obj.subjects[0] = {{obj.subjects[0]}} </pre>
+            <ul>
+                <li ng-repeat="sub in obj.subjects">
+                    {{sub}}<br>
+                    <input ng-model="sub" />
+                </li>
+            </ul>
+            <button ng-disabled="firstForm.$invalid || firstForm.$pristine">OK</button>
+        </form>
+    </div>
+</body>
+
+
+</html>

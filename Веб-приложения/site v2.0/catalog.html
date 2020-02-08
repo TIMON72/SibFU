@@ -1,0 +1,32 @@
+<html>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="/js/cookie.js"></script>
+<div class="row">
+    <script>
+        $(document).ready ( function(){
+            var cookies = Cookies.get();
+            for (var cookie in cookies) {
+                var table = document.getElementById("tableCatalog");
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.appendChild(document.createTextNode(cookie));
+                tr.appendChild(td);
+                table.appendChild(tr);
+            }
+        });
+
+    </script>
+    <table id="tableCatalog" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Материал</th>
+            </tr>
+        </thead>
+        <tbody id="tableCatalogBody">
+        </tbody>
+    </table>
+</div>
+<dir class="row">
+    <button type="submit" class="btn btn-default" onclick=""><a id="catalog" style="text-decoration: none;" href="catalog.html" download>Скачать</a></button>
+</dir>
+</html>

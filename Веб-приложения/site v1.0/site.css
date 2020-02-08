@@ -1,0 +1,134 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #9CF;
+	/*background-image: url('pictures/body-bg.png');*/
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+ul, ol, dl {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+a img {
+	border: none;
+}
+a:link {
+	color:#414958;
+	text-decoration: underline;
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: none;
+}
+.container {
+	width: 1024px;
+	max-width: 1260px;
+	min-width: 780px;
+	background-color: #FFF;
+	margin: 0 auto;
+	font-family: "Times New Roman";
+	font-size: 20px;
+}
+.header {
+	background-color: #6F7D94;
+	background-image: url(pictures/head-bg-left.png);
+	height: 150px;
+	width: 1024px;
+	display: table;
+}
+.main {
+	display: table;
+	width: 1024px;
+	/*margin: 0px auto;*/
+}
+.sidebar1 {
+	display: table-cell;
+	width: 250px;
+	background-color: #0099FF;
+	font-family: "Tahoma";
+}
+.content {
+	display: table-cell;
+	padding-left: 50px;
+	text-align: justify;
+}
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px;
+}
+ul.nav {
+	list-style: none; /* удаляет маркер списка */
+	border-top: 1px solid #666;
+	margin-bottom: 15px; /* создает пространство между навигацией по содержимому ниже */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* разделяет кнопки */
+}
+ul.nav a, ul.nav a:visited { 
+	padding: 5px 5px 5px 15px;
+	display: block;
+	text-decoration: none;
+	background-color: #00CCFF;
+	color: #000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
+	background-color: #6F7D94;
+	color: #FFF;
+}
+ul.headline {
+	padding: 0px;
+	list-style: none; /* удаляет маркер списка */
+}
+ul.headline li {
+	float: left;
+	border-bottom: 1px solid;
+}
+ul.headline a, ul.headline a:visited { 
+	padding: 5px 10px 5px 10px;
+	display: block;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	color: #000;
+}
+ul.headline a:hover, ul.headline a:active, ul.headline a:focus {
+	background-color: #00CCFF;
+	color: #FFFFFF;
+}
+.toTop{
+	width:100px;
+	border:1px solid #ccc;
+	background:#f7f7f7;
+	text-align:center;
+	padding:5px;
+	position:fixed;
+	bottom:10px; /* отступ кнопки от нижнего края страницы*/
+	right:10px;
+	display: none;
+	color:#333;
+	font-family:verdana;
+	font-size:16px;
+}
+.footer {
+	font-family: "Georgia";
+	padding: 10px 0;
+	background-color: #6F7D94;
+	background-image: url('pictures/footer-bg.png');
+	width: 1024px;
+	position: relative;/* IE6 получает hasLayout для правильной очистки */
+	clear: both;
+}
+.clearfloat {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
