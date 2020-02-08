@@ -1,0 +1,36 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MLP"
+        xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:oxy="http://oxyplot.org/wpf" x:Class="MLP.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="595.367" Width="1209" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-5">
+        <GroupBox Header="Провести исследование" HorizontalAlignment="Left" Height="49" Margin="220,0,0,0" VerticalAlignment="Top" Width="973">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Начальное значение N:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,0,2"/>
+                <wpfx:MaskedTextBox x:Name="MTB_N_start" Mask="000000" RenderTransformOrigin="0.743,0.778" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="0" Margin="0,0,0,2" Width="46"/>
+                <Label Content="Конечное значение N:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.468,-1.481" Margin="0,0,0,2"/>
+                <wpfx:MaskedTextBox x:Name="MTB_N_end" Mask="000000" RenderTransformOrigin="0.743,0.778" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="1000" Margin="0,0,0,2" Width="47"/>
+                <Label Content="Шаг:&#xD;&#xA;" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.468,-1.481" Margin="0,0,0,2"/>
+                <wpfx:MaskedTextBox x:Name="MTB_N_step" Mask="00000" RenderTransformOrigin="-0.632,0.68" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="100" Margin="0,0,0,2" Width="38"/>
+                <Label Content="Количество опытов:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.468,-1.481" Margin="0,0,0,2"/>
+                <wpfx:MaskedTextBox x:Name="MTB_M" Mask="000" RenderTransformOrigin="-0.632,0.68" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="1" Margin="0,0,0,2" Width="27"/>
+                <ProgressBar x:Name="PB_Experience" Width="300" Margin="0,0,0,2"/>
+                <Button x:Name="B_Experience" Content="Исследовать" Click="B_Experience_Click" Margin="0,0,0,2" Width="73"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Запуск персептрона" HorizontalAlignment="Left" Height="555" VerticalAlignment="Top" Width="220                   ">
+            <StackPanel>
+                <Button x:Name="B_TestTeaching" Content="Обучить персептрон" VerticalAlignment="Top" Height="21" Click="B_Teaching_Click"/>
+                <TextBox x:Name="TB_Answer"  TextWrapping="Wrap" Margin="0" Padding="0" Height="511" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="График" HorizontalAlignment="Left" Height="504" Margin="220,49,0,0" VerticalAlignment="Top" Width="973">
+            <oxy:PlotView Name="plotView"/>
+        </GroupBox>
+    </Grid>
+</Window>
