@@ -140,10 +140,9 @@ public class Lexer {
                 if (!text.isEmpty()) {
                     tokens.add(new Token(operatorsMap.get(text), text));
                     return;
-                } else {
+                } else
                     throw new Exception("Ошибка токенизации: строка " + line + " позиция " + pos + 
-                    ": неопознанный оператор\n");
-                }
+                    ": неопознанный оператор\n" + printTokens());
             }
             buffer.append(current);
             current = next();
@@ -251,8 +250,9 @@ public class Lexer {
             if (current == '"')
                 break;
             else if ("\r\n\t\0 ".indexOf(peek(1)) != -1)
+                
                 throw new Exception("Ошибка токенизации: строка " + line + " позиция " + pos + 
-                ": ожидалась закрывающая кавычка\n");
+                ": ожидалась закрывающая кавычка\n" + printTokens());
             buffer.append(current);
             current = next();
         }
@@ -292,7 +292,7 @@ public class Lexer {
             else
                 throw new Exception(
                         "Ошибка токенизации: строка " + line + " позиция " + pos + 
-                        ": неопознанный символ\n");
+                        ": неопознанный символ\n" + printTokens());
         }
         return tokens;
     }
